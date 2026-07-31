@@ -1,0 +1,30 @@
+/* ==========================================
+   IRONFORGE FITNESS
+   CSS VARIABLES
+========================================== */
+
+:root{
+
+    /* COLORS */
+
+    --black:#0B0B0B;
+    --dark:#121212;
+    --card:#1B1B1B;
+
+    --red:#ff3131;
+    --yellow:#f7ff3c;
+
+    --white:#ffffff;
+    --text:#bdbdbd;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 15px 40px rgba(0,0,0,.45);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+    --container:1200px;
+
+}
