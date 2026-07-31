@@ -133,3 +133,22 @@ font-size:.75rem;
 }
 
 }
+
+
+@media (max-width:768px){
+
+    .whatsapp-btn{
+
+        width:52px;
+
+        height:52px;
+
+        left:18px;
+
+        bottom:18px;
+
+        font-size:1.7rem;
+
+    }
+
+}
