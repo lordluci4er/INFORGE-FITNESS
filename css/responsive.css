@@ -1,154 +1,266 @@
-/* ================================
-TABLET
-================================ */
+/* ==========================================================
+   TABLET (992px)
+========================================================== */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
-.hero-container{
+    html,
+    body{
+        overflow-x:hidden;
+    }
 
-grid-template-columns:1fr;
+    .container{
+        width:100%;
+        padding-inline:20px;
+    }
 
-text-align:center;
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:50px;
+        padding-top:120px;
+    }
 
-padding-top:120px;
+    .hero-content{
+        order:2;
+    }
 
+    .hero-image{
+        order:1;
+    }
+
+    .hero-content p{
+        margin-inline:auto;
+        max-width:600px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-image img{
+        width:420px;
+        max-width:100%;
+        height:auto;
+    }
+
+    .stats-grid,
+    .why-grid,
+    .program-grid,
+    .pricing-grid,
+    .trainer-grid,
+    .transform-grid,
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .bmi-wrapper,
+    .contact-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .join-btn{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
 }
 
-.hero-content{
 
-order:2;
-
-}
-
-.hero-image{
-
-order:1;
-
-}
-
-.hero-content p{
-
-margin-inline:auto;
-
-}
-
-.hero-buttons{
-
-justify-content:center;
-
-}
-
-.hero-image img{
-
-width:420px;
-
-}
-
-.nav-links{
-
-display:none;
-
-}
-
-.join-btn{
-
-display:none;
-
-}
-
-.menu-btn{
-
-display:block;
-
-}
-
-}
-
-/* ================================
-MOBILE
-================================ */
-
-@media(max-width:768px){
-
-.hero-content h1{
-
-font-size:4rem;
-
-}
-
-.hero-image img{
-
-width:320px;
-
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-}
-
-.btn{
-
-width:100%;
-
-}
-
-.logo img{
-
-width:130px;
-
-}
-
-.navbar{
-
-height:80px;
-
-}
-
-}
-
-/* ================================
-SMALL MOBILE
-================================ */
-
-@media(max-width:480px){
-
-.hero-content h1{
-
-font-size:3.2rem;
-
-}
-
-.hero-content p{
-
-font-size:.95rem;
-
-}
-
-.hero-tag{
-
-font-size:.75rem;
-
-}
-
-}
-
+/* ==========================================================
+   MOBILE (768px)
+========================================================== */
 
 @media (max-width:768px){
 
-    .whatsapp-btn{
+    html,
+    body{
+        overflow-x:hidden;
+    }
 
-        width:52px;
+    .container{
+        padding-inline:16px;
+    }
 
-        height:52px;
+    .section{
+        padding:70px 0;
+    }
 
-        left:18px;
+    .navbar{
+        height:80px;
+    }
 
+    .logo img{
+        width:110px;
+    }
+
+    .hero{
+        padding-top:100px;
+    }
+
+    .hero::before{
+        width:320px;
+        height:320px;
+        right:-100px;
+    }
+
+    .hero-content h1{
+        font-size:3.4rem;
+        line-height:1.05;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .hero-image img{
+        width:280px;
+        max-width:100%;
+        height:auto;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .section-title h2{
+        font-size:2.6rem;
+        line-height:1.1;
+    }
+
+    .stats-grid,
+    .why-grid,
+    .program-grid,
+    .pricing-grid,
+    .trainer-grid,
+    .transform-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stat-card,
+    .program-card,
+    .price-card,
+    .trainer-card,
+    .transform-card{
+        width:100%;
+    }
+
+    .featured{
+        transform:none;
+    }
+
+    .featured:hover{
+        transform:translateY(-8px);
+    }
+
+    .trainer-image{
+        height:320px;
+    }
+
+    .trainer-image img{
+        height:290px;
+    }
+
+    .bmi-wrapper{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .bmi-right{
+        margin-top:20px;
+    }
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .contact-form{
+        margin-top:20px;
+    }
+
+    .map iframe{
+        width:100%;
+        height:300px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+        text-align:center;
+    }
+
+    .footer-social{
+        justify-content:center;
+    }
+
+    .back-to-top{
+        width:50px;
+        height:50px;
+        right:18px;
         bottom:18px;
+    }
 
-        font-size:1.7rem;
+    .whatsapp-btn{
+        width:52px;
+        height:52px;
+        left:18px;
+        bottom:18px;
+        font-size:1.6rem;
+    }
+}
 
+
+/* ==========================================================
+   SMALL MOBILE (480px)
+========================================================== */
+
+@media (max-width:480px){
+
+    .hero-content h1{
+        font-size:2.8rem;
+    }
+
+    .hero-content p{
+        font-size:.95rem;
+    }
+
+    .hero-tag{
+        font-size:.75rem;
+    }
+
+    .hero-image img{
+        width:240px;
+    }
+
+    .section-title h2{
+        font-size:2.2rem;
+    }
+
+    .price-card{
+        padding:30px 20px;
+    }
+
+    .bmi-left,
+    .bmi-result{
+        padding:25px 20px;
+    }
+
+    .contact-info{
+        padding:25px 20px;
     }
 
 }
