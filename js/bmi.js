@@ -1,60 +1,53 @@
-const btn=document.getElementById("calculateBMI");
+document.addEventListener("DOMContentLoaded", () => {
 
-btn.addEventListener("click",()=>{
+    const btn = document.getElementById("calculateBMI");
 
-const height=document.getElementById("height").value;
+    if (!btn) return;
 
-const weight=document.getElementById("weight").value;
+    btn.addEventListener("click", () => {
 
-if(height===""||weight===""){
+        const height = parseFloat(document.getElementById("height").value);
+        const weight = parseFloat(document.getElementById("weight").value);
 
-alert("Please enter height and weight.");
+        if (!height || !weight) {
 
-return;
+            alert("Please enter height and weight.");
+            return;
 
-}
+        }
 
-const bmi=(weight/((height/100)*(height/100))).toFixed(1);
+        const bmi = (weight / ((height / 100) * (height / 100))).toFixed(1);
 
-document.getElementById("bmiValue").innerHTML=bmi;
+        document.getElementById("bmiValue").textContent = bmi;
 
-let status="";
-let message="";
+        let status = "";
+        let message = "";
 
-if(bmi<18.5){
+        if (bmi < 18.5) {
 
-status="Underweight";
+            status = "Underweight";
+            message = "You should focus on healthy weight gain.";
 
-message="You should focus on healthy weight gain.";
+        } else if (bmi < 25) {
 
-}
+            status = "Healthy";
+            message = "Excellent! Keep maintaining your fitness.";
 
-else if(bmi<25){
+        } else if (bmi < 30) {
 
-status="Healthy";
+            status = "Overweight";
+            message = "Regular workouts and balanced nutrition are recommended.";
 
-message="Excellent! Keep maintaining your fitness.";
+        } else {
 
-}
+            status = "Obese";
+            message = "Consult a trainer and follow a structured fitness plan.";
 
-else if(bmi<30){
+        }
 
-status="Overweight";
+        document.getElementById("bmiStatus").textContent = status;
+        document.getElementById("bmiMessage").textContent = message;
 
-message="Regular workouts and balanced nutrition are recommended.";
-
-}
-
-else{
-
-status="Obese";
-
-message="Consult a trainer and follow a structured fitness plan.";
-
-}
-
-document.getElementById("bmiStatus").innerHTML=status;
-
-document.getElementById("bmiMessage").innerHTML=message;
+    });
 
 });
